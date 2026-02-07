@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ezrover.github.io/6bravo/sitemap.xml
