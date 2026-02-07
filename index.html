@@ -15,17 +15,18 @@
     />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="page">
       <header class="nav">
         <a class="logo" href="index.html">
-          <img src="assets/6bravo.com/orig_02ff7ec8555e3e90.png" alt="" />
+          <img src="assets/6bravo.com/orig_02ff7ec8555e3e90.png" alt="" loading="eager" decoding="async" />
           <span>6bravo</span>
         </a>
         <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">
           <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
         </button>
         <nav id="main-nav" class="links">
-          <a href="index.html">Home</a>
+          <a class="active" href="index.html" aria-current="page">Home</a>
           <a href="experience.html">Experience</a>
           <a href="education.html">Education</a>
           <a href="media.html">Media</a>
@@ -33,16 +34,63 @@
         </nav>
       </header>
 
-      <main id="top">
+      <main id="main-content">
         <section class="hero">
           <div class="hero-copy">
             <p class="eyebrow">Global Emergency Management</p>
             <h1>Wendy Schamaun</h1>
             <p class="hero-subline">Boots-on-ground Instructor, Mentor, Manager</p>
+            <div class="cta-row">
+              <a
+                class="button"
+                href="mailto:wschamaun@gmail.com?subject=Briefing%20Request%20from%206bravo.com"
+                >Book Briefing</a
+              >
+              <a
+                class="button ghost"
+                href="assets/6bravo.com/wendy-resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Download Resume</a
+              >
+            </div>
           </div>
           <div class="hero-headshot">
-            <img src="assets/6bravo.com/Wendy.png" alt="Wendy Schamaun" />
+            <img
+              src="assets/6bravo.com/Wendy-optimized.jpg"
+              srcset="assets/6bravo.com/Wendy-optimized.jpg 1200w, assets/6bravo.com/Wendy.png 1419w"
+              sizes="(max-width: 980px) 280px, 290px"
+              alt="Wendy Schamaun"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+              width="1200"
+              height="1200"
+            />
           </div>
+        </section>
+
+        <section class="section split">
+          <article class="panel">
+            <p class="eyebrow">At a glance</p>
+            <h3>Mission outcomes</h3>
+            <ul class="checklist">
+              <li>30+ years in emergency, security, and response operations</li>
+              <li>Nearly 50 FEMA certifications and instructor credentials</li>
+              <li>12+ allied countries supported through training and mentorship</li>
+              <li>20,000+ community vaccinations supported during COVID response</li>
+            </ul>
+          </article>
+          <article class="panel">
+            <p class="eyebrow">Who Wendy trains</p>
+            <h3>Built for high-consequence environments</h3>
+            <ul class="checklist">
+              <li>First responders, military teams, diplomatic staff, and civilians</li>
+              <li>Incident command, tactical medicine, and active threat readiness</li>
+              <li>Train-the-trainer delivery with local host-nation coordination</li>
+              <li>Consulting and on-site leadership for complex operations</li>
+            </ul>
+          </article>
         </section>
 
         <section id="introduction" class="section intro">
@@ -72,10 +120,18 @@
             <a href="tel:+13863663130">+1 386-366-3130</a>.
           </p>
           <div class="cta-row">
-            <a class="button" href="assets/6bravo.com/wendy-resume.pdf" target="_blank"
+            <a
+              class="button"
+              href="mailto:wschamaun@gmail.com?subject=Briefing%20Request%20from%206bravo.com"
+              >Book Briefing</a
+            >
+            <a
+              class="button ghost"
+              href="assets/6bravo.com/wendy-resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               >Download Resume</a
             >
-            <a class="button ghost" href="#contact">Book Briefing</a>
           </div>
         </section>
 
@@ -91,7 +147,14 @@
             </ul>
           </div>
           <div class="panel image-panel">
-            <img src="assets/6bravo.com/orig_00dd5ac8f6feb396.png" alt="6bravo field operation" />
+            <img
+              src="assets/6bravo.com/orig_00dd5ac8f6feb396-optimized.jpg"
+              srcset="assets/6bravo.com/orig_00dd5ac8f6feb396-optimized.jpg 1400w, assets/6bravo.com/orig_00dd5ac8f6feb396.png 2560w"
+              sizes="(max-width: 980px) 100vw, 50vw"
+              alt="6bravo field operation"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </section>
 
@@ -293,12 +356,24 @@
             </ul>
           </div>
           <div class="panel image-panel">
-            <img src="assets/6bravo.com/education.png" alt="Education and certifications credential highlights" />
+            <img
+              src="assets/6bravo.com/education-optimized.jpg"
+              srcset="assets/6bravo.com/education-optimized.jpg 900w, assets/6bravo.com/education.png 1510w"
+              sizes="(max-width: 980px) 100vw, 50vw"
+              alt="Education and certifications credential highlights"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </section>
 
         <section id="media" class="section media-strip">
-          <img src="assets/6bravo.com/orig_c9f2aeae4f15d149.jpeg" alt="Tactical training scene" />
+          <img
+            src="assets/6bravo.com/orig_c9f2aeae4f15d149.jpeg"
+            alt="Tactical training scene"
+            loading="lazy"
+            decoding="async"
+          />
         </section>
 
         <section id="portfolio" class="section">
@@ -308,13 +383,35 @@
           </div>
           <div class="portfolio-grid">
             <a class="portfolio-card" href="#credentials">
-              <img src="assets/6bravo.com/certifications.png" alt="Education and certifications" />
+              <img
+                src="assets/6bravo.com/certifications-optimized.jpg"
+                srcset="assets/6bravo.com/certifications-optimized.jpg 900w, assets/6bravo.com/certifications.png 1510w"
+                sizes="(max-width: 760px) 100vw, 33vw"
+                alt="Education and certifications"
+                loading="lazy"
+                decoding="async"
+              />
+              <span>Credentials</span>
             </a>
             <a class="portfolio-card" href="experience.html">
-              <img src="assets/6bravo.com/experience.jpg" alt="Experience and credentials" />
+              <img
+                src="assets/6bravo.com/experience.jpg"
+                alt="Experience and credentials"
+                loading="lazy"
+                decoding="async"
+              />
+              <span>Experience</span>
             </a>
             <a class="portfolio-card" href="media.html">
-              <img src="assets/6bravo.com/media.png" alt="Media and additional information" />
+              <img
+                src="assets/6bravo.com/media-optimized.jpg"
+                srcset="assets/6bravo.com/media-optimized.jpg 900w, assets/6bravo.com/media.png 1510w"
+                sizes="(max-width: 760px) 100vw, 33vw"
+                alt="Media and additional information"
+                loading="lazy"
+                decoding="async"
+              />
+              <span>Media</span>
             </a>
           </div>
         </section>
@@ -329,36 +426,18 @@
           </p>
           <p>
             LinkedIn:
-            <a href="https://www.linkedin.com/in/wendyschamaun/" target="_blank"
+            <a href="https://www.linkedin.com/in/wendyschamaun/" target="_blank" rel="noopener noreferrer"
               >linkedin.com/in/wendyschamaun</a
             >
           </p>
         </div>
-        <a class="button" href="assets/6bravo.com/wendy-resume.pdf" target="_blank">Download Resume</a>
+        <a
+          class="button"
+          href="mailto:wschamaun@gmail.com?subject=Briefing%20Request%20from%206bravo.com"
+          >Book Briefing</a
+        >
       </footer>
     </div>
-    <script>
-      (function () {
-        var btn = document.querySelector('.hamburger');
-        var nav = document.querySelector('#main-nav');
-        function toggleMenu() {
-          var open = !nav.classList.contains('open');
-          btn.classList.toggle('open', open);
-          nav.classList.toggle('open', open);
-          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-          document.body.classList.toggle('menu-open', open);
-        }
-        function closeMenu() {
-          btn.classList.remove('open');
-          nav.classList.remove('open');
-          btn.setAttribute('aria-expanded', 'false');
-          document.body.classList.remove('menu-open');
-          btn.focus();
-        }
-        btn.addEventListener('click', toggleMenu);
-        nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeMenu); });
-        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
-      })();
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -31,9 +31,31 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background:
-    linear-gradient(rgba(7, 10, 20, 0.7), rgba(7, 10, 20, 0.9)),
-    url("assets/6bravo.com/orig_00dd5ac8f6feb396.png") center/cover no-repeat;
+  background: linear-gradient(rgba(7, 10, 20, 0.86), rgba(7, 10, 20, 0.94));
+}
+
+@media (min-width: 761px) {
+  body::before {
+    background:
+      linear-gradient(rgba(7, 10, 20, 0.7), rgba(7, 10, 20, 0.9)),
+      url("assets/6bravo.com/orig_c9f2aeae4f15d149.jpeg") center/cover no-repeat;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100%;
+  z-index: 200;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+}
+
+.skip-link:focus {
+  top: 1rem;
 }
 
 a {
@@ -95,6 +117,11 @@ a {
   color: var(--text);
 }
 
+.links a.active {
+  color: var(--text);
+  font-weight: 700;
+}
+
 .button {
   border: 1px solid var(--accent);
   border-radius: 999px;
@@ -114,6 +141,15 @@ a {
   background: transparent;
   color: var(--text);
   box-shadow: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+.button:focus-visible,
+.portfolio-card:focus-visible {
+  outline: 3px solid #8db0ff;
+  outline-offset: 2px;
+  border-radius: 10px;
 }
 
 main {
@@ -386,6 +422,31 @@ main {
 
 .media-card p {
   color: var(--muted);
+}
+
+.media-note {
+  color: var(--muted);
+  max-width: 72ch;
+}
+
+.media-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: #8fa3d6;
+}
+
+.media-source time {
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 .footer {

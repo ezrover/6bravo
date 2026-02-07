@@ -15,10 +15,11 @@
     />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="page">
       <header class="nav">
         <a class="logo" href="index.html">
-          <img src="assets/6bravo.com/orig_02ff7ec8555e3e90.png" alt="" />
+          <img src="assets/6bravo.com/orig_02ff7ec8555e3e90.png" alt="" loading="eager" decoding="async" />
           <span>6bravo</span>
         </a>
         <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">
@@ -27,26 +28,40 @@
         <nav id="main-nav" class="links">
           <a href="index.html">Home</a>
           <a href="experience.html">Experience</a>
-          <a href="education.html">Education</a>
+          <a class="active" href="education.html" aria-current="page">Education</a>
           <a href="media.html">Media</a>
           <a href="index.html#contact">Contact</a>
         </nav>
       </header>
 
-      <main>
+      <main id="main-content">
         <section class="hero">
           <div class="hero-copy">
             <p class="eyebrow">Education</p>
             <h1>Education & Professional Development</h1>
             <p class="hero-subline">Credentials, coursework, and specialist qualifications</p>
             <div class="cta-row">
-              <a class="button" href="assets/6bravo.com/wendy-education.pdf" target="_blank"
+              <a
+                class="button"
+                href="mailto:wschamaun@gmail.com?subject=Briefing%20Request%20from%206bravo.com"
+                >Book Briefing</a
+              >
+              <a
+                class="button ghost"
+                href="assets/6bravo.com/wendy-education.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 >Open PDF</a
               >
             </div>
           </div>
           <div class="hero-headshot">
-            <img src="assets/6bravo.com/orig_caa8023a007d90c8.jpg" alt="Wendy Schamaun" />
+            <img
+              src="assets/6bravo.com/orig_caa8023a007d90c8.jpg"
+              alt="Wendy Schamaun"
+              loading="eager"
+              decoding="async"
+            />
           </div>
         </section>
 
@@ -54,38 +69,21 @@
           <div class="section-heading">
             <p class="eyebrow">Education</p>
           </div>
+          <p class="media-note">
+            Embedded PDF preview is available below. If your browser blocks embedded documents, use
+            <a href="assets/6bravo.com/wendy-education.pdf" target="_blank" rel="noopener noreferrer">Open PDF</a>.
+          </p>
           <div class="panel">
             <iframe
               src="assets/6bravo.com/wendy-education.pdf"
               title="Wendy education PDF"
+              loading="lazy"
               style="width: 100%; min-height: 78vh; border: 0; border-radius: 10px"
             ></iframe>
           </div>
         </section>
       </main>
     </div>
-    <script>
-      (function () {
-        var btn = document.querySelector('.hamburger');
-        var nav = document.querySelector('#main-nav');
-        function toggleMenu() {
-          var open = !nav.classList.contains('open');
-          btn.classList.toggle('open', open);
-          nav.classList.toggle('open', open);
-          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-          document.body.classList.toggle('menu-open', open);
-        }
-        function closeMenu() {
-          btn.classList.remove('open');
-          nav.classList.remove('open');
-          btn.setAttribute('aria-expanded', 'false');
-          document.body.classList.remove('menu-open');
-          btn.focus();
-        }
-        btn.addEventListener('click', toggleMenu);
-        nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeMenu); });
-        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
-      })();
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
