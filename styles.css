@@ -104,7 +104,6 @@ a {
   width: clamp(8rem, 22vw, 10.5rem);
   height: auto;
   display: block;
-  filter: brightness(1.6) contrast(1.18) saturate(1.08) drop-shadow(0 0 8px rgba(176, 206, 255, 0.32));
 }
 
 .links {
