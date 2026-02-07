@@ -467,20 +467,21 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index: 30;
+    z-index: 50;
+    position: relative;
   }
 
   .links {
     position: fixed;
     inset: 0;
-    z-index: 25;
-    background: rgba(9, 14, 27, 0.96);
-    backdrop-filter: blur(12px);
+    z-index: 40;
+    background: var(--bg);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.8rem;
+    gap: 2rem;
     font-size: 1.3rem;
+    padding: 4rem 2rem 2rem;
     display: none;
   }
 
@@ -490,15 +491,24 @@ main {
 
   .links a:not(.button) {
     display: block;
-    color: var(--text);
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.2s;
   }
 
-  .links .button {
-    margin-top: 0.5rem;
+  .links a:not(.button):hover {
+    color: var(--text);
   }
 
   body.menu-open {
     overflow: hidden;
+  }
+
+  body.menu-open .nav {
+    background: transparent;
+    border-color: transparent;
+    backdrop-filter: none;
   }
 
   .portfolio-grid {
